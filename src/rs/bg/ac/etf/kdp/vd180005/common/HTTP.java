@@ -2,7 +2,7 @@ package rs.bg.ac.etf.kdp.vd180005.common;
 
 /**
  *
- * @author Aleksandar Abu-Samra
+ * @author Dobrosav Vlaskovic
  */
 public class HTTP {
 

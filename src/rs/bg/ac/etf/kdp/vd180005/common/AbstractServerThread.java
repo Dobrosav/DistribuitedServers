@@ -9,7 +9,6 @@ import java.net.Socket;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import rs.bg.ac.etf.kdp.vd180005.common.StreamOperations;
 import rs.bg.ac.etf.kdp.vd180005.server.ServerThread;
 
 public abstract class AbstractServerThread extends Thread {

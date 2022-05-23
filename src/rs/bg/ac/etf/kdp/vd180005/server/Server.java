@@ -60,6 +60,7 @@ public class Server extends AbstractServer {
 						String msg = "File "
 								+ filename
 								+ " deleted.";
+
 						MyLogger.logger.log(Level.INFO, msg);
 					} else {
 						String msg = "Delete operation failed "
