@@ -180,7 +180,7 @@ public class ClientGUI extends javax.swing.JFrame {
 		client.sendGetRequest(serverAddress, serverPort, filename);
     }//GEN-LAST:event_btnGetActionPerformed
 
-
+    
     private void tfFilenameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFilenameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfFilenameActionPerformed
