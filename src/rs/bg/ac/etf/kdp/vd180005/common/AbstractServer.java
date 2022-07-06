@@ -2,9 +2,13 @@ package rs.bg.ac.etf.kdp.vd180005.common;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.concurrent.Semaphore;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -74,9 +78,22 @@ public abstract class AbstractServer extends Thread {
 	}
 		
 	public String getAddress() {
+		ArrayList<String> ipl= new ArrayList<String>();
 		try {
-			return InetAddress.getLocalHost().getHostAddress();
-		} catch (UnknownHostException ex) {
+			Enumeration Interfaces = NetworkInterface.getNetworkInterfaces();
+			while(Interfaces.hasMoreElements())
+			{
+			    NetworkInterface Interface = (NetworkInterface)Interfaces.nextElement();
+			    Enumeration Addresses = Interface.getInetAddresses();
+			    while(Addresses.hasMoreElements())
+			    {
+			        InetAddress Address = (InetAddress)Addresses.nextElement();
+			    //    System.out.println(Address.getHostAddress());
+			        ipl.add(Address.getHostAddress());
+			    }
+			 }
+			return "91.187.155.138";
+		} catch ( SocketException ex) {
 			ex.printStackTrace();
 		}
 		

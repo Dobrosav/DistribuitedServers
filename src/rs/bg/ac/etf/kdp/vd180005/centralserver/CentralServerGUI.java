@@ -47,8 +47,8 @@ public class CentralServerGUI extends javax.swing.JFrame {
 
         jLabel2.setText("Port");
 
-        tfAddress.setEditable(false);
-        tfAddress.setEnabled(false);
+        tfAddress.setEditable(true);
+        tfAddress.setEnabled(true);
         tfAddress.setName(""); // NOI18N
 
         spinPort.setModel(new javax.swing.SpinnerNumberModel(1024, 1024, 65535, 1));

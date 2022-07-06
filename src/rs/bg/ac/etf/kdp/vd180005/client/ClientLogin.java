@@ -41,7 +41,7 @@ public class ClientLogin {
 	private void readData() {
 	
 			Scanner scanner;
-			int i = 0;
+			
 			try {
 				scanner = new Scanner(new File("users.csv"));
 				while (scanner.hasNextLine()) {
@@ -57,6 +57,7 @@ public class ClientLogin {
 	public ClientLogin() {
 		initialize();
 		readData();
+		users.remove(0);
 	}
 
 	/**

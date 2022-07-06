@@ -119,23 +119,7 @@ public class StreamOperations {
 	public static String getLine(InputStream input) {
 		String line = "";
 
-		try {
-			char c;
-			int data = input.read();
-
-			while (data != -1) {
-				c = (char) data;
-				if (c == '\n') {
-					break;
-				}
-				if (c != '\r') {
-					line += c;
-				}
-				data = input.read();
-			}
-		} catch (IOException ex) {
-			Logger.getLogger(ServerThread.class.getName()).log(Level.SEVERE, null, ex);
-		}
+	
 
 		return line;
 	}
